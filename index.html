@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="style.css">
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <h1>代入ドリル自動生成</h1>
+
+  <div class="row">
+    <label>問題数: <input id="count" type="number" value="5" min="1" max="100"></label>
+    <label>次数の範囲: <input id="minDegree" type="number" value="2" min="0"> ～ <input id="maxDegree" type="number" value="5" max="10"></label>
+  </div>
+
+  <div class="row">
+    <label>分子: <input id="numerMin" type="number" value="-20"> ～ <input id="numerMax" type="number" value="20"></label>
+    <label>分母: <input id="denomMin" type="number" value="1"> ～ <input id="denomMax" type="number" value="20"></label>
+  </div>
+
+  <div class="row">
+    <label><input type="checkbox" id="allowInt" checked> 整数を含める</label>
+    <label><input type="checkbox" id="allowFrac" checked> 分数を含める</label>
+  </div>
+
+  <button onclick="generateProblems()">生成</button>
+
+  <div class="section-title">📘 問題</div>
+  <div id="problems"></div>
+
+  <div class="section-title">✅ 解答</div>
+  <div id="answers"></div>
+
+  <script src="script.js"></script>
